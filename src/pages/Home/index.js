@@ -31,7 +31,13 @@ export default () => {
   return (
     <div id="main">
       {!!username || <Form getUserInfo={search} />}
-      {error ? <p role="alert">There has been an error!</p> : renderResult()}
+      {error ? (
+        <p role="alert" id="error">
+          There is no user with the given username!
+        </p>
+      ) : (
+        renderResult()
+      )}
     </div>
   );
 };

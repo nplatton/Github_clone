@@ -6,7 +6,9 @@
   justify-content: center;
 }
 
-#loading {
+#loading,
+#error {
   font-size: 2em;
   color: orange;
+  font-family: "Sansita Swashed", cursive;
 }
