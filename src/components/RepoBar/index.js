@@ -2,27 +2,9 @@ import React from "react";
 
 import "./style.css";
 
-export default () => {
-  const data = {
-    name: "test_repository",
-    url: "test_repo@test.com",
-    isOriginalRepo: true,
-    forks: 69,
-    watchers: 6,
-    stargazers: 9,
-    createdAt: {
-      date: "2022-01-23",
-      time: "12:23:40",
-    },
-    lastUpdated: {
-      date: "2022-01-25",
-      time: "09:40:02",
-    },
-    language: "JavaScript",
-  };
-
+export default ({ data }) => {
   return (
-    <div className="repo-bar">
+    <div data-testid="repo-bar" className="repo-bar">
       <div className="left-side">
         <h3>{data.name}</h3>
         <div className="counts">
