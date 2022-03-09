@@ -10,7 +10,6 @@ export default ({ getUserInfo }) => {
     try {
       await getUserInfo(username);
       // Clear input box on submit
-      console.log(e.target.childNodes);
       e.target.childNodes[1].value = "";
     } catch (err) {
       console.warn(err);

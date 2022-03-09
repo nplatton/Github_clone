@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { getUserInfo } from "../../actions";
 import { Form, Result } from "../../components";
 
-function Home() {
+export default () => {
   const dispatch = useDispatch();
 
   const result = useSelector((state) => state.result);
   const username = useSelector((state) => state.username);
   const loading = useSelector((state) => state.loading);
   const error = useSelector((state) => state.error);
+
+  // useEffect(() => {
+  //   console.log(result);
+  // }, [result]);
 
   const search = (username) => dispatch(getUserInfo(username));
 
@@ -19,9 +23,8 @@ function Home() {
 
   return (
     <>
-      <Form getUserInfo={search} />
+      {!!username || <Form getUserInfo={search} />}
+      {error ? <p role="alert">There has been an error!</p> : renderResult()}
     </>
   );
-}
-
-export default Home;
+};
