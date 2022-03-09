@@ -3,9 +3,14 @@
   height: 100px;
   padding: 20px;
   color: rgb(31, 31, 31);
-  background-color: orange;
+  background-color: rgba(255, 166, 0, 0.856);
   border-radius: 20px;
   display: flex;
+  border: 3px solid white;
+}
+
+.repo-bar:hover {
+  background-color: orange;
 }
 
 .left-side {
@@ -22,7 +27,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
   margin-top: 15px;
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 
 .dates {
