@@ -5,11 +5,12 @@ import "./style.css";
 export default ({ getUserInfo }) => {
   const [username, setUsername] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      getUserInfo(username);
+      await getUserInfo(username);
       // Clear input box on submit
+      console.log(e.target.childNodes);
       e.target.childNodes[1].value = "";
     } catch (err) {
       console.warn(err);
