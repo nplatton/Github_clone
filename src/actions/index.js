@@ -47,7 +47,7 @@ function extractData(info) {
     name: repo.name,
     url: repo.html_url,
     isOriginalRepo: !repo.fork,
-    forks: repo.forks,
+    forks: repo.forks_count,
     watchers: repo.watchers_count,
     stargazers: repo.stargazers_count,
     createdAt: {

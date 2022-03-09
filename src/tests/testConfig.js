@@ -32,20 +32,16 @@ axios.get.mockResolvedValue({
   data: [
     {
       name: "test_repo",
-      url: "test_repo@test.com",
-      isOriginalRepo: !false,
-      forks: 3,
-      watchers: 2,
-      stargazers: 0,
-      createdAt: {
-        date: "2022-01-23",
-        time: "11:20:20",
+      html_url: "test_repo@test.com",
+      fork: false,
+      forks_count: 3,
+      watchers_count: 2,
+      stargazers_count: 0,
+      created_at: "2022-01-23T11:20:20Z",
+      pushed_at: "2022-01-25T13:34:20Z",
+      license: {
+        spdx_id: "MIT",
       },
-      lastUpdated: {
-        date: "2022-01-25",
-        time: "13:34:20",
-      },
-      license: "MIT",
       language: "JavaScript",
     },
   ],
