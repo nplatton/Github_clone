@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { getUserInfo } from "../../actions";
 import { Form, Result } from "../../components";
+import { RepoBar } from "../../components";
 
 import "./style.css";
 
