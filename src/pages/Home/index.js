@@ -22,7 +22,11 @@ export default () => {
   const search = (username) => dispatch(getUserInfo(username));
 
   const renderResult = () =>
-    loading ? <p>Loading . . .</p> : <Result results={result} />;
+    loading ? (
+      <p>Loading . . .</p>
+    ) : (
+      <Result result={result} username={username} />
+    );
 
   return (
     <div id="main">

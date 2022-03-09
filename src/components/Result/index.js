@@ -1,24 +1,16 @@
 import React, { useEffect } from "react";
 
+import { RepoBar } from "..";
+
 import "./style.css";
 
-
-export default function Result ({result}) {
-
-  useEffect(()=> {
-    
-  }, [])
-
-  return (
-  <>
-  <div>
-    {result.map(r => (
-      <div key={r.name}> 
-        <RepoBar data={r}/>
+export default ({ username, result }) => {
+  const renderResults = () =>
+    result.map((r) => (
+      <div key={r.name}>
+        <RepoBar data={r} />
       </div>
-      ))
-    }
-  </div>
-  </>
-  );
+    ));
+
+  return <div id="results">{username && renderResults()}</div>;
 };
