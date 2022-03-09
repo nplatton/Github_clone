@@ -58,7 +58,7 @@ function extractData(info) {
       date: repo.pushed_at.split("T")[0],
       time: repo.pushed_at.split(/[TZ]/)[1],
     },
-    license: repo.license.spdx_id,
+    // license: repo.license.spdx_id,
     language: repo.language,
   }));
 }

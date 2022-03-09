@@ -39,9 +39,9 @@ axios.get.mockResolvedValue({
       stargazers_count: 0,
       created_at: "2022-01-23T11:20:20Z",
       pushed_at: "2022-01-25T13:34:20Z",
-      license: {
-        spdx_id: "MIT",
-      },
+      // license: {
+      // spdx_id: "MIT",
+      // },
       language: "JavaScript",
     },
   ],
