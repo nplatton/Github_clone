@@ -1,0 +1,22 @@
+h1 {
+  text-align: center;
+  color: orange;
+  font-family: "Sansita Swashed", cursive;
+  font-size: 3em;
+  text-shadow: -1px 0 rgb(240, 240, 240), 0 1px rgb(240, 240, 240),
+    1px 0 rgb(240, 240, 240), 0 -1px rgb(240, 240, 240);
+}
+
+#home-title {
+  position: absolute;
+  top: 200px;
+  right: 0;
+  left: 0;
+}
+
+#user-title {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 0;
+}
