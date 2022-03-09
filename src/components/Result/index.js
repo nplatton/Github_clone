@@ -1,22 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import "./style.css";
 
 
 export default function Result ({result}) {
 
-
-  const resultRender = result.forEach(repo => {
-    <RepoBar data={repo} />
-  });
-
+  useEffect(()=> {
+    
+  }, [])
 
   return (
   <>
   <div>
-    {resultRender.map(r => (
+    {result.map(r => (
       <div key={r.name}> 
-        <RepoBar />
+        <RepoBar data={r}/>
       </div>
       ))
     }
