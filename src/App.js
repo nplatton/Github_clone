@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import { Header } from "./layout";
 import { Home, About } from "./pages";
 
-export const App = () => {
+ const App = () => {
   return (
     <>
       <Header/>
@@ -19,3 +19,5 @@ export const App = () => {
     </>
   );
 };
+
+export default App
