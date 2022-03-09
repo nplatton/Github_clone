@@ -7,7 +7,7 @@ import { Home, About } from "./pages";
 export const App = () => {
   return (
     <>
-      {/* <Header/> */}
+      <Header/>
       <Switch>
         <Route exact path="/">
           <Home />
