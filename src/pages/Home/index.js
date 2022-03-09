@@ -23,7 +23,7 @@ export default () => {
 
   const renderResult = () =>
     loading ? (
-      <p>Loading . . .</p>
+      <p id="loading">Loading . . .</p>
     ) : (
       <Result result={result} username={username} />
     );

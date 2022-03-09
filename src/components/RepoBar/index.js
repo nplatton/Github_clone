@@ -8,9 +8,9 @@ export default ({ data }) => {
       <div className="left-side">
         <h3>{data.name}</h3>
         <div className="counts">
-          <div className="forks">Forks: {data.forks}</div>
-          <div className="watchers">Watchers: {data.watchers}</div>
-          <div className="stargazers">Stargazers: {data.stargazers}</div>
+          <div>Forks: {data.forks}</div>
+          <div className="count">Watchers: {data.watchers}</div>
+          <div className="count">Stargazers: {data.stargazers}</div>
         </div>
       </div>
       <div className="dates">

@@ -12,6 +12,7 @@ h1 {
   top: 200px;
   right: 0;
   left: 0;
+  word-spacing: 5px;
 }
 
 #user-title {
@@ -19,4 +20,5 @@ h1 {
   top: 50px;
   right: 0;
   left: 0;
+  word-spacing: 10px;
 }

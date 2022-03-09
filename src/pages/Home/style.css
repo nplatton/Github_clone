@@ -5,3 +5,8 @@
   align-items: center;
   justify-content: center;
 }
+
+#loading {
+  font-size: 2em;
+  color: orange;
+}

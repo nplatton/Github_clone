@@ -1,5 +1,5 @@
 .repo-bar {
-  width: 100%;
+  width: 700px;
   height: 100px;
   padding: 20px;
   color: rgb(31, 31, 31);
@@ -19,16 +19,20 @@
 }
 
 h3 {
-  margin-top: -10px;
+  margin-top: -5px;
   font-size: 1.5em;
 }
 
 .counts {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 15px;
+  justify-content: start;
+  margin-top: 19px;
   font-size: 0.8em;
+}
+
+.count {
+  margin-left: 20px;
 }
 
 .dates {
