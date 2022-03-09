@@ -7,18 +7,17 @@ const loading = (username) => ({
 
 const loadResult = (data) => ({
   type: "LOAD_RESULT",
-  payload: {},
+  payload: data, // -----------------------------------
 });
 
 export const getUserInfo = (username) => {
   return async (dispatch) => {
     dispatch(loading(username));
     try {
-      const info = await getRepos(username);
-      // Do stuff
+      const allInfo = await getRepos(username);
       // Maybe extract necessary info here?
-      const data = extractData(info);
-      dispatch(loadResult(data));
+      const neededInfo = extractData(allInfo);
+      dispatch(loadResult(neededInfo));
     } catch (err) {
       console.warn(err);
       dispatch({
@@ -41,4 +40,25 @@ async function getRepos(username) {
   } catch (err) {
     throw new Error(err.message);
   }
+}
+
+function extractData(info) {
+  return info.map((repo) => ({
+    name: repo.name,
+    url: repo.html_url,
+    isOriginalRepo: !repo.fork,
+    forks: repo.forks,
+    watchers: repo.watchers_count,
+    stargazers: repo.stargazers_count,
+    createdAt: {
+      date: repo.created_at.split("T")[0],
+      time: repo.created_at.split(/[TZ]/)[1],
+    },
+    lastUpdated: {
+      date: repo.pushed_at.split("T")[0],
+      time: repo.pushed_at.split(/[TZ]/)[1],
+    },
+    license: repo.license.spdx_id,
+    language: repo.language,
+  }));
 }

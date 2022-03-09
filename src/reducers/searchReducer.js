@@ -1,6 +1,6 @@
 const initialState = {
   username: "",
-  result: {},
+  result: [],
   loading: false,
 };
 
