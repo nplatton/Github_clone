@@ -9,13 +9,13 @@ import thunk from "redux-thunk";
 
 import searchReducer from "../reducers/searchReducer";
 
-const TestProviders = ({ initState }) => {
-  initState ||= {
+const TestProviders = ({ initialState }) => {
+  initialState ||= {
     username: "",
     result: [],
     loading: false,
   };
-  let testReducer = () => searchReducer(initState, { type: "@@INIT" });
+  let testReducer = () => searchReducer(initialState, { type: "@@INIT" });
   const testStore = createStore(testReducer, applyMiddleware(thunk));
 
   return ({ children }) => <Provider store={testStore}>{children}</Provider>;
