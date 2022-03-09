@@ -27,7 +27,7 @@ const config = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: `public/index.html`,
-      favicon: `src/images/favicon.png`,
+      favicon: `src/images/icone-github-orange.png`,
     }),
     new Dotenv(),
   ],
