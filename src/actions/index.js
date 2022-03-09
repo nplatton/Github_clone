@@ -7,7 +7,7 @@ const loading = (username) => ({
 
 const loadResult = (data) => ({
   type: "LOAD_RESULT",
-  payload: data, // -----------------------------------
+  payload: data,
 });
 
 export const getUserInfo = (username) => {
