@@ -1,21 +1,23 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import { Header } from "./layout";
-import { Home, About } from "./pages";
+// import { Header } from "./layout";
+import { Home, NotFound } from "./pages";
 
-export const App = () => {
+const App = () => {
   return (
     <>
-      <Header/>
+      {/* <Header /> */}
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/about">
-          <About />
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
     </>
   );
 };
+
+export default App;
