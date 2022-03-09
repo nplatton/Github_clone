@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 console.log(__dirname);
+const Dotenv = require("dotenv-webpack");
 
 const ROOT_DIRECTORY = path.join(__dirname, "../");
 const PUBLIC_DIRECTORY = path.join(ROOT_DIRECTORY, "public");
@@ -28,6 +29,7 @@ const config = {
       template: `public/index.html`,
       favicon: `src/images/favicon.png`,
     }),
+    new Dotenv(),
   ],
   module: {
     rules: [
