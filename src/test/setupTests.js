@@ -11,8 +11,8 @@ import searchReducer from "../reducers/searchReducer";
 
 const TestProviders = ({ initState }) => {
   initState ||= {
-    location: "",
-    result: { sunrise: "", sunset: "" },
+    username: "",
+    result: [],
     loading: false,
   };
   let testReducer = () => searchReducer(initState, { type: "@@INIT" });
