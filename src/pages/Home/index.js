@@ -23,7 +23,8 @@ function Home() {
 
   return (
     <>
-      <Form getUserInfo={search} />
+      {username || <Form getUserInfo={search} />}
+      {error ? <p role="alert">There has been an error!</p> : renderResult()}
     </>
   );
 }
