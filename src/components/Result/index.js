@@ -12,5 +12,9 @@ export default ({ username, result }) => {
       </div>
     ));
 
-  return <div id="results">{username && renderResults()}</div>;
+  return (
+    <div role="region" id="results">
+      {username && renderResults()}
+    </div>
+  );
 };
