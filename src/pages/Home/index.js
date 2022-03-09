@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { getUserInfo } from "../../actions";
@@ -11,6 +11,10 @@ function Home() {
   const username = useSelector((state) => state.username);
   const loading = useSelector((state) => state.loading);
   const error = useSelector((state) => state.error);
+
+  useEffect(() => {
+    console.log(result);
+  }, [result]);
 
   const search = (username) => dispatch(getUserInfo(username));
 
