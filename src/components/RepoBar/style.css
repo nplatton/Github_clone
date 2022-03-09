@@ -1,0 +1,50 @@
+.repo-bar {
+  width: 50%;
+  height: 100px;
+  padding: 20px;
+  color: rgb(31, 31, 31);
+  background-color: rgba(255, 166, 0, 0.856);
+  border-radius: 20px;
+  display: flex;
+  border: 3px solid white;
+}
+
+.repo-bar:hover {
+  background-color: orange;
+}
+
+.left-side {
+  width: 50%;
+}
+
+h3 {
+  margin-top: -10px;
+  font-size: 2em;
+}
+
+.counts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 0.8em;
+}
+
+.dates {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10%;
+  width: 40%;
+  font-size: 0.9em;
+}
+
+.created,
+.last-updated {
+  display: flex;
+}
+
+.date-time {
+  margin-left: 8px;
+}

@@ -30,8 +30,9 @@ export default ({ getUserInfo }) => {
         name="username"
         type="text"
         value={username}
+        placeholder="Enter Github username..."
       />
-      <input type="submit" value="Search" />
+      <input id="submit" type="submit" value="Search" />
     </form>
   );
 };

@@ -3,6 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { getUserInfo } from "../../actions";
 import { Form, Result } from "../../components";
+import { RepoBar } from "../../components";
+
+import "./style.css";
 
 export default () => {
   const dispatch = useDispatch();
@@ -22,9 +25,9 @@ export default () => {
     loading ? <p>Loading . . .</p> : <Result results={result} />;
 
   return (
-    <>
+    <div id="main">
       {!!username || <Form getUserInfo={search} />}
       {error ? <p role="alert">There has been an error!</p> : renderResult()}
-    </>
+    </div>
   );
 };

@@ -1,0 +1,35 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 200px;
+  background-color: rgb(255, 166, 0);
+  border-radius: 50px;
+  border: 3px solid rgb(240, 240, 240);
+}
+
+#username {
+  width: 60%;
+  height: 20%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgb(240, 240, 240);
+  background-color: rgb(184, 119, 0);
+}
+
+#submit {
+  margin-top: 20px;
+  color: rgb(240, 240, 240);
+  background-color: rgb(31, 31, 31);
+  width: 20%;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid rgb(14, 14, 14);
+  font: 1.1em;
+}
+
+#submit:hover {
+  border: 2px solid rgb(240, 240, 240);
+}
